@@ -1,0 +1,23 @@
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+env
+*.sqlite3
+
+# Editors
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Audio output
+audio/*.mp3
+dump.rdb
+

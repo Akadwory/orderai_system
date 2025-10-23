@@ -43,39 +43,3 @@ def generate_intro_audio():
 
 if __name__ == "__main__":
     generate_intro_audio()
-
-
-"""import os
-import requests
-from dotenv import load_dotenv
-
-load_dotenv()
-
-ELEVENLABS_API_KEY = os.getenv("ELEVENLABS_API_KEY")
-ELEVENLABS_VOICE_ID = os.getenv("ELEVENLABS_VOICE_ID")
-
-def generate_intro_audio():
-    text = "Hey there! Thanks for calling Captain Sam’s Fish & Chicken. Want to place an order for pickup?"
-    url = f"https://api.elevenlabs.io/v1/text-to-speech/{ELEVENLABS_VOICE_ID}"
-    headers = {
-        "xi-api-key": ELEVENLABS_API_KEY,
-        "Content-Type": "application/json"
-    }
-    body = {
-        "text": text,
-        "model_id": "eleven_monolingual_v1",
-        "voice_settings": {
-            "stability": 0.5,
-            "similarity_boost": 0.75
-        }
-    }
-
-    response = requests.post(url, json=body, headers=headers)
-    os.makedirs("audio", exist_ok=True)
-    with open("audio/welcome.mp3", "wb") as f:
-        f.write(response.content)
-
-    print("✅ Welcome message saved to audio/welcome.mp3")
-
-generate_intro_audio()
-"""

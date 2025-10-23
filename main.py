@@ -16,9 +16,6 @@ def wants_change(speech: str) -> bool:
     s = speech.lower()
     return any(k in s for k in CHANGE_KEYWORDS)
 
-
-
-
 def parse_agent_json(text: str):
     """
     Try to parse the model output as JSON. Expected shape:
